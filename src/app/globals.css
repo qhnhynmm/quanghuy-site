@@ -1,0 +1,285 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Theme configuration - converted from tailwind.config.js */
+@theme {
+  /* Custom breakpoints */
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Custom fonts */
+  --font-family-mazzardl: var(--font-mazzardl);
+  --font-family-mazzardh: var(--font-mazzardh);
+  --font-family-mazzardm: var(--font-mazzardm);
+
+  /* Custom keyframes */
+  --animate-scroll: scroll 20s linear infinite;
+  --animate-scroll-reverse: scroll-reverse 20s linear infinite;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-infinite-slider: scroll 20s linear infinite;
+  --animate-infinite-slider-reverse: scroll-reverse 20s linear infinite;
+}
+
+/* Keyframes definitions */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Container configuration */
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  /* No scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Focus visible utilities for better keyboard navigation */
+  .focus-visible-ring {
+    @apply focus-visible:ring-primary focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Animation utilities */
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+
+  .animate-infinite-slider {
+    animation: scroll 20s linear infinite;
+  }
+
+  .animate-infinite-slider-reverse {
+    animation: scroll-reverse 20s linear infinite;
+  }
+
+  .animate-gradient-move {
+    animation: gradientMove 3s ease infinite;
+  }
+}
+
+/* Typography plugin overrides - disabling default styles */
+@layer components {
+  /* Disable typography plugin default styles */
+  .prose code::before,
+  .prose code::after,
+  .prose blockquote p:first-of-type::before,
+  .prose blockquote p:last-of-type::after {
+    content: none;
+  }
+
+  .prose pre,
+  .prose code,
+  .prose pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-weight: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+  }
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Dark mode configuration */
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+} */
+
+/* Plugin imports - Note: These may need to be updated for v4 compatibility */
+@plugin "daisyui" {
+  themes:
+    gvsu --default,
+    light,
+    dark --prefersdark,
+    winter,
+    night,
+    lofi,
+    corporate;
+  root: ':root';
+  prefix: '';
+  logs: true;
+}
+
+/* GVSU Custom Theme */
+@plugin "daisyui/theme" {
+  name: 'gvsu';
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Base colors - using GVSU White and tints */
+  --color-base-100: oklch(100% 0 0); /* White #FFFFFF */
+  --color-base-200: oklch(98% 0.005 240); /* Very light tint */
+  --color-base-300: oklch(95% 0.01 240); /* Light tint */
+  --color-base-content: oklch(0% 0 0); /* Black #000000 */
+
+  /* Primary - GVSU Blue */
+  --color-primary: oklch(35% 0.175 264); /* GVSU Blue #0032A0 */
+  --color-primary-content: oklch(100% 0 0); /* White for contrast */
+
+  /* Secondary - Midnight */
+  --color-secondary: oklch(25% 0.08 280); /* Midnight #13155C */
+  --color-secondary-content: oklch(100% 0 0); /* White for contrast */
+
+  /* Accent - Link Blue */
+  --color-accent: oklch(78% 0.14 210); /* Link Blue #0ECBF0 */
+  --color-accent-content: oklch(0% 0 0); /* Black for contrast */
+
+  /* Neutral - Midnight */
+  --color-neutral: oklch(25% 0.08 280); /* Midnight #13155C */
+  --color-neutral-content: oklch(100% 0 0); /* White for contrast */
+
+  /* Info - Link Blue (alternative use) */
+  --color-info: oklch(78% 0.14 210); /* Link Blue #0ECBF0 */
+  --color-info-content: oklch(0% 0 0); /* Black for contrast */
+
+  /* Success - Big Lake */
+  --color-success: oklch(78% 0.12 190); /* Big Lake #3DD1CC */
+  --color-success-content: oklch(0% 0 0); /* Black for contrast */
+
+  /* Warning - Archway Tan */
+  --color-warning: oklch(82% 0.06 70); /* Archway #DEC197 */
+  --color-warning-content: oklch(0% 0 0); /* Black for contrast */
+
+  /* Error - Carillon Brick */
+  --color-error: oklch(55% 0.1 40); /* Carillon Brick #BA6F4C */
+  --color-error-content: oklch(100% 0 0); /* White for contrast */
+
+  /* Border radius */
+  --radius-selector: 3.625px;
+  --radius-field: 3.625px;
+  --radius-box: 3.625px;
+
+  /* Base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Border size */
+  --border: 1px;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin 'tailwind-scrollbar';
+@plugin "@tailwindcss/typography";

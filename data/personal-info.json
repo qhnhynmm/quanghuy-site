@@ -1,0 +1,170 @@
+{
+  "fullName": "Pham Quang Huy",
+  "preferredName": "Quang Huy",
+  "gender": "Male",
+  "pronouns": "He/Him/His",
+  "languages": ["Vietnamese (native)", "English (fluent)"],
+  "nationality": "Vietnamese",
+  "hometown": "Ho Chi Minh City, Vietnam",
+  "currentLocation": "Thu Duc, Ho Chi Minh City, Vietnam",
+  "pets": ["Two hamsters (Fat and Squirrel)"],
+  "contact": {
+    "email": {
+      "personal": "huyqhkhdl@gmail.com",
+      "academic": "21522163@gm.uit.edu.vn"
+    },
+    "phone": "(+84) 0332008242",
+    "socialMedia": {
+      "linkedin": "https://www.linkedin.com/in/huy-pham-quang-ai/",
+      "github": "https://github.com/qhnhynmm",
+      "instagram": "https://www.instagram.com/bosshuyman/",
+      "facebook": "https://www.facebook.com/pham.quang.huy.827022",
+      "twitter": "https://x.com/QuangMi17303138"
+    },
+    "resume": "https://tranmq.vercel.app/home/minhtran-resume.pdf"
+  },
+  "devices": {
+    "laptop": "Acer Nitro 5 (AN515-58-53ZP) - Intel Core i5-12500H, 16GB RAM, 512GB SSD",
+    "phone": "iphone 14 Pro (256GB)",
+    "tablet": "Ipad gen 11 (2021) (256GB)",
+    "audio": "AirPods Pro (2nd Gen)"
+  },
+  "developmentTools": [
+    "VS Code",
+    "Jupyter Notebook",
+    "Xcode",
+    "Android Studio",
+    "Ghostty Terminal",
+    "DBeaver",
+    "Docker",
+    "Insomnia",
+    "Cloudflare",
+    "AWS",
+    "Digital Ocean",
+    "Catppuccin theme"
+  ],
+  "preferredFields": [
+    "Software Engineering",
+    "Data Engineering",
+    "Machine Learning",
+    "Deep Learning",
+    "Distributed Systems",
+    "System Design"
+  ],
+  "hobbies": [
+    "Coffee",
+    "Tech news",
+    "Fashion",
+    "Traveling",
+    "Workout",
+    "Cooking"
+  ],
+  "skills": {
+    "programmingLanguages": [
+      "Python",
+      "JavaScript",
+      "Java",
+      "C++",
+      "Swift",
+      "Kotlin",
+      "SQL",
+      "HTML",
+      "CSS",
+      "GraphQL",
+      "Scala",
+      "TypeScript",
+      "Go",
+      "C"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Keras",
+      "PyTorch",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "OpenCV",
+      "Matplotlib",
+      "Tailwind CSS",
+      "Bootstrap",
+      "DaisyUI",
+      "Bun",
+      "SwiftUI",
+      "Quarkus",
+      "Fastify",
+      "Django",
+      "Flask",
+      "Fastlane"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "AWS",
+      "Firebase",
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "SQLite",
+      "REST APIs",
+      "GraphQL",
+      "CI/CD",
+      "Neo4j",
+      "Apache Kafka",
+      "Redis",
+      "MariaDB",
+      "RabbitMQ",
+      "ZeroMQ",
+      "Nginx",
+      "Github Actions",
+      "Digital Ocean",
+      "Apache Hadoop",
+      "Apache Spark",
+      "Raspberry Pi"
+    ],
+    "specialties": [
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Microservices",
+      "System Design",
+      "Distributed Systems",
+      "Data Structures",
+      "Algorithms",
+      "Object-Oriented Programming",
+      "Functional Programming",
+      "Test-Driven Development",
+      "Agile Methodologies"
+    ]
+  },
+  "currentResearch": [
+    {
+      "title": "Species-level Coral Classification using Deep Learning Models",
+      "description": "Using our own dataset",
+      "advisors": [
+        {
+          "name": "Dr. Denton Bobeldyk",
+          "linkedin": "https://www.linkedin.com/in/denton-bobeldyk-phd-271b4518"
+        },
+        {
+          "name": "Dr. Jonathan Leidig",
+          "linkedin": "https://www.linkedin.com/in/jonathan-leidig-a9b661184"
+        }
+      ]
+    },
+    {
+      "title": "Raspberry Pi Based Computing Prototypes: Design, Implementation and Performance Analysis",
+      "advisors": [
+        {
+          "name": "Dr. Xiang Cao",
+          "linkedin": "https://www.linkedin.com/in/xiang-cao-15183570"
+        }
+      ]
+    }
+  ]
+}
+
+
