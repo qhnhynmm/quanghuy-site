@@ -10,7 +10,7 @@ import { getLocationText } from '@/common/constants/location';
 import FontAwesomeIcon from '@/common/elements/FontAwesomeIcon';
 
 const Hero = () => {
-  const headshotSrc = '/home/headshot.png';
+  const headshotSrc = '/home/headshot.jpg';
 
   return (
     <article aria-label='Hero section'>
